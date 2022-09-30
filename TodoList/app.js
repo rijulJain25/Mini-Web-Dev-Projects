@@ -33,15 +33,15 @@ app.post("/", function(req, res){
   }
 });
 
-app.delete("/", function(req, res){
-  const itemDel = req.body.delItem;
-  for(var i = 0; i<items.length; i++){
-    if(itemDel === items[i]){
-      items.splice(i,1);
-    }
-  }
-  alert("There no such item in list");
-});
+// app.delete("/", function(req, res){
+//   const itemDel = req.body.delItem;
+//   for(var i = 0; i<items.length; i++){
+//     if(itemDel === items[i]){
+//       items.splice(i,1);
+//     }
+//   }
+//   alert("There no such item in list");
+// });
 
 app.get("/work", function(req, res){
   res.render("list", {listTitle: "Work List", newListItems: workItems});
